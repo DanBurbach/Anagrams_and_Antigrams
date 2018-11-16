@@ -1,9 +1,6 @@
 class String
   def word_entry
-    if self.gsub(/[^\d]/, '')
-      return "Please no numbers in the words!"
-
-    elsif (self.gsub(/\d/))
+    if self.gsub(/[\d]/)&&self.gsub(/[a,e,i,o,u,y]/)
       return "This isn't a valid entry, please enter an actual word or words!!"
 
     else
