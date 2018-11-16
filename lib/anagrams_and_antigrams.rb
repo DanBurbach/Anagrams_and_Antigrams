@@ -9,9 +9,9 @@ class String
       inputted_words.downcase!()
       inputted_words.gsub!(/[!@#$%^&*()-=_+|;':",.<>?']/, '')
       inputted_words.gsub!(/\s+/, "")
-      inputted_words.scan!(/\w/)
       binding.pry
-      return inputted_word
+      split_words = inputted_words.chars.to_a
+      return split_words
     #end
   end
 end
