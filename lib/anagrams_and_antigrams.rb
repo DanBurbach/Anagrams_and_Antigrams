@@ -11,7 +11,7 @@ class String
       inputted_words.gsub!(/\s+/, "")
       inputted_words.scan!(/\w/)
       binding.pry
-      return inputted_words
+      return inputted_word
     #end
   end
 end
