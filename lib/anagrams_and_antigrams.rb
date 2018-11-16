@@ -1,8 +1,8 @@
-class Anagram
-  def anagram_entry
+class String
+  def word_entry
     inputted_words = self
-    inputted_words.char
-    return inputted_words.fetch()
-    #binding.pry
+    inputted_words.lowercase!()
+    binding.pry
+  return inputted_words
   end
 end
