@@ -3,13 +3,19 @@ require('anagrams_and_antigrams.rb')
 require('pry')
 
 
-describe '#anagrams' do
-  it("changes letters in a phrase to lower case and removes all spaces and punctuation and then turns into an array of letters") do
-    expect("Clint Eastwood!".anagrams).to eql(["c","l","i","n","t","e","a","s","t","w","o","o","d"])
+describe '#anagram_filter' do
+  it("is an anagram") do
+    expect("cat".anagram_filter).to eql("tac")
   end
-  #it("when any numbers found or no vowels found") do
-  #  expect("ytrvb123".anagrams).to eql("This isn't a valid entry, please enter an actual word or words!!")
-  #end
+  it("is an antigram when no letters match") do
+    expect("cat".anagram_filter).to eql("bob")
+  end
+  it("when any numbers found or no vowels found") do
+    expect("ytrvb123".anagram_filter).to eql("This isn't a valid entry, please enter an actual word or words!!")
+  end
+  it("spaces and punctuation removed along with lower case and creating an array") do
+    expect("Clint Eastwood!".anagram_filter).to eql(["c","l","i","n","t","e","a","s","t","w","o","o","d"])
+  end
 end
 #Clint Eastwood! = Old West action!
 #clinteastwood = oldwestaction
