@@ -4,18 +4,22 @@ require('pry')
 
 
 describe '#anagram_filter' do
-  it("is an anagram") do
-    expect("cat".anagram_filter).to eql("tac")
+  it("when the words have the same number of letters and type of letters") do
+    expect("cat".anagram_filter).to eql("These words are anagrams")
   end
   it("is an antigram when no letters match") do
-    expect("cat".anagram_filter).to eql("bob")
+    expect("cat".anagram_filter).to eql("These words are antigrams")
   end
   it("when any numbers found or no vowels found") do
     expect("ytrvb123".anagram_filter).to eql("This isn't a valid entry, please enter an actual word or words!!")
   end
-  it("spaces and punctuation removed along with lower case and creating an array") do
+  it("spaces and punctuation removed") do
+    expect("Clint Eastwood!".anagram_filter).to eql("ClintEastwood")
+  end
+  it("word made lower case and creating an array") do
     expect("Clint Eastwood!".anagram_filter).to eql(["c","l","i","n","t","e","a","s","t","w","o","o","d"])
   end
+
 end
 #Clint Eastwood! = Old West action!
 #clinteastwood = oldwestaction

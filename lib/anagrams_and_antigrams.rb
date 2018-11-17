@@ -4,16 +4,10 @@ class Anagram
     @word2 = word2
   end
 
-  def word1
-    word1 = Anagram.new("cat")
-  end
-
-  def word2
-    word2 = Anagram.new("tac")
-  end
-
   def anagram_filter
-    user_entries = [word1, word2]
+    user_entries = [@word1, @word2]
+    x = @word1.chars.to_a.sort
+    y = @word2.chars.to_a.sort
     if user_entries.gsub(/[\d]/)&&user_entries.gsub(/[a,e,i,o,u,y]/)
     binding.pry
       return "This isn't a valid entry, please enter an actual word or words!!"
@@ -23,10 +17,12 @@ class Anagram
       user_entries.gsub!(/\s+/, "")
     binding.pry
       split_words = inputted_words.chars.to_a
-      if (word1.chars.to_a.sort == word1.chars.to_a.sort) = true
+
+      if (x == y) == true
         return "These words are anagrams"
-      else (word1.chars.to_a.sort == word1.chars.to_a.sort) = false
+      else
         return "These words are antigrams"
+      end
     end
   end
 end
