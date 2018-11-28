@@ -20,7 +20,7 @@ describe 'AnagramTest' do
 
    context "check if inputs are actual words" do
      it "returns a negative if there are no vowels or if there are numbers in the words" do
-       words = AnagramTest.new("Clint Eastwood!", "Old West Action!!")
+       words = AnagramTest.new("Cl1nt E4stw00d!", "mld Wtrt mctpln!!")
        expect(words.anagram_filter()).to(eq("This isn't a valid entry, please enter an actual word or words!!"))
      end
    end
