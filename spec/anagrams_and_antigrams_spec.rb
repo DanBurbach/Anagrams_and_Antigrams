@@ -13,7 +13,7 @@ describe 'AnagramTest' do
 
    context "when accounting for words that may have different cases" do
      it "returns positive regardless of being capitalized" do
-       words = AnagramTest.new("Tea", "Dog")
+       words = AnagramTest.new("Tea", "Eat")
        expect(words.anagram_filter()).to(eq("These words are anagrams."))
      end
    end
