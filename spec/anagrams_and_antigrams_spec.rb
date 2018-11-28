@@ -11,12 +11,12 @@ describe 'AnagramTest' do
     end
   end
 
-  # context "when accounting for words that may have different cases" do
-    # it "returns positive regardless of being capitalized" do
-      # words = AnagramTest.new("Tea", "Eat")
-      # expect(words.anagram_filter()).to(eq("These words are anagrams."))
-    # end
-  # end
+   context "when accounting for words that may have different cases" do
+     it "returns positive regardless of being capitalized" do
+       words = AnagramTest.new("Tea", "Dog")
+       expect(words.anagram_filter()).to(eq("These words are anagrams."))
+     end
+   end
 
   # context "check if inputs are actual words" do
     # it "returns a negative if there are no vowels or if there are numbers in the words" do
