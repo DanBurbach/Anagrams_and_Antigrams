@@ -25,26 +25,26 @@ describe 'AnagramTest' do
      end
    end
 
-  # context "check if words are actual antigrams if they are not anagrams" do
-    # it "returns a negative if no letters match" do
-      # words = AnagramTest.new("hi", "bye")
-      # expect(words.anagram_filter()).to(eq("These words are antigrams and are not anagrams."))
-    # end
-  # end
+   context "check if words are actual antigrams if they are not anagrams" do
+      it "returns a negative if no letters match" do
+       words = AnagramTest.new("hi", "bye")
+       expect(words.anagram_filter()).to(eq("These words are antigrams and are not anagrams."))
+     end
+   end
 
-  # context "Account for multiple words being anagrams" do
-    # it "returns a positive for multiple words that match up as anagrams" do
-      # words = AnagramTest.new("Clint Eastwood!", "Old West Action!!")
-      # expect(words.anagram_filter()).to(eq("These words are anagrams."))
-    # end
-  # end
+   context "Account for multiple words being anagrams" do
+     it "returns a positive for multiple words that match up as anagrams" do
+       words = AnagramTest.new("Clint Eastwood!", "Old West Action!!")
+       expect(words.anagram_filter()).to(eq("These words are anagrams."))
+     end
+   end
 
-  # context "Account for multiple words being antigrams" do
-    # it "returns a neative for multiple words that don't match up as antigrams" do
-      # words = AnagramTest.new("Nintey-nine red balloons", "Old West Action!!")
-      # expect(words.anagram_filter()).to(eq("These words are antigrams and are not anagrams."))
-    # end
-  # end
+   context "Account for multiple words being antigrams" do
+     it "returns a neative for multiple words that don't match up as antigrams" do
+       words = AnagramTest.new("Nintey-nine red balloons", "Old West Action!!")
+       expect(words.anagram_filter()).to(eq("These words are antigrams and are not anagrams."))
+     end
+   end
 end
 
 #Clint Eastwood! = Old West action!
