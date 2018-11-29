@@ -18,10 +18,14 @@ class AnagramTest
       array_word1 = punctuation1.gsub(/\s+/, "")
       array_word2 = punctuation2.gsub(/\s+/, "")
 
-      if (array_word1.chars.to_a.sort == array_word2.chars.to_a.sort)
+      if (array_word1.chars.to_a.sort == array_word2.chars.to_a.sort) && (array_word1.count(array_word1) == array_word2.count(array_word2))
         return "These words are anagrams."
-      else
+
+      elsif (array_word1.chars.to_a.sort == array_word2.chars.to_a.sort) && (array_word1.count(array_word1) >= array_word2.count(array_word2)) || (array_word1.count(array_word1) <= array_word2.count(array_word2))
         return "These words are antigrams and are not anagrams."
+
+      else (array_word1.count(array_word1) < array_word2.count(array_word2)) || (array_word1.count(array_word1) > array_word2.count(array_word2))
+        return "These are neither anagram nor antigrams"
       end
     end
   end

@@ -39,10 +39,10 @@ describe 'AnagramTest' do
      end
    end
 
-   context "Account for multiple words being antigrams" do
-     it "returns a neative for multiple words that don't match up as antigrams" do
-       words = AnagramTest.new("Nintey-nine red balloons", "Old West Action!!")
-       expect(words.anagram_filter()).to(eq("These words are antigrams and are not anagrams."))
+   context "Account for words not being anagram nor antigram" do
+     it "returns a neative for words that don't match up as antigram or anagram" do
+       words = AnagramTest.new("Nintey-nine", "Action!!")
+       expect(words.anagram_filter()).to(eq("These are neither anagram nor antigrams"))
      end
    end
 end
